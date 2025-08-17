@@ -1,0 +1,321 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  animation: gradient-shift 8s ease-in-out infinite;
+}
+
+/* Entrance animations */
+.App-header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+  animation: slide-down-fade 1s ease-out 0.2s both;
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+.App-header h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  animation: text-glow 2s ease-in-out 1s infinite alternate;
+}
+
+.App-header p {
+  margin: 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  animation: fade-in-up 1s ease-out 0.6s both;
+  transform: translateY(20px);
+}
+
+.App-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  animation: fade-in 1s ease-out 0.8s both;
+  opacity: 0;
+}
+
+.component-section {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: slide-up-fade 0.8s ease-out both;
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.component-section:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.component-section:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.component-section:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+.component-section h2 {
+  color: #1f2937;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  animation: text-slide-in 0.6s ease-out 0.3s both;
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.component-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  animation: fade-in-scale 0.8s ease-out 0.5s both;
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+.input-group {
+  width: 100%;
+  max-width: 400px;
+  animation: slide-in-left 0.6s ease-out both;
+  transform: translateX(-30px);
+  opacity: 0;
+}
+
+.input-group:nth-child(1) { animation-delay: 1.6s; }
+.input-group:nth-child(2) { animation-delay: 1.7s; }
+.input-group:nth-child(3) { animation-delay: 1.8s; }
+.input-group:nth-child(4) { animation-delay: 1.9s; }
+.input-group:nth-child(5) { animation-delay: 2s; }
+
+.toast-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  animation: fade-in-bounce 0.8s ease-out 1.6s both;
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+.toast-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  animation: button-pop 0.5s ease-out both;
+  transform: scale(0);
+}
+
+.toast-btn:nth-child(1) { animation-delay: 2.1s; }
+.toast-btn:nth-child(2) { animation-delay: 2.2s; }
+.toast-btn:nth-child(3) { animation-delay: 2.3s; }
+.toast-btn:nth-child(4) { animation-delay: 2.4s; }
+
+.toast-btn--success {
+  background: #10b981;
+}
+
+.toast-btn--success:hover {
+  background: #059669;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.toast-btn--error {
+  background: #ef4444;
+}
+
+.toast-btn--error:hover {
+  background: #dc2626;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+}
+
+.toast-btn--warning {
+  background: #f59e0b;
+}
+
+.toast-btn--warning:hover {
+  background: #d97706;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+}
+
+.toast-btn--info {
+  background: #3b82f6;
+}
+
+.toast-btn--info:hover {
+  background: #2563eb;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.sidebar-btn {
+  padding: 16px 32px;
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+  animation: button-slide-up 0.8s ease-out 2.5s both;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.sidebar-btn:hover {
+  background: #7c3aed;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(139, 92, 246, 0.5);
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Animation Keyframes */
+@keyframes gradient-shift {
+  0%, 100% {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  50% {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  }
+}
+
+@keyframes slide-down-fade {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up-fade {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes text-slide-in {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-scale {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bounce {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes button-pop {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes button-slide-up {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes text-glow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 2rem;
+  }
+  
+  .App-header p {
+    font-size: 1rem;
+  }
+  
+  .App-main {
+    padding: 0 1rem;
+  }
+  
+  .component-section {
+    padding: 1.5rem;
+  }
+  
+  .toast-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .toast-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Loading state for better UX */
+.App.loading {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.App.loaded {
+  opacity: 1;
+}
